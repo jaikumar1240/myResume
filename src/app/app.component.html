@@ -1,0 +1,147 @@
+<div class="main_body">
+  <img class="landing_img" src="assets/homeBg.jpg" alt="">
+  
+  <div @textTrigger class="landing_content" id="home">
+    <div>
+      <!-- <h1 class="landing_content_text heading_font_style">Jai Kumar</h1> -->
+    </div>
+    <div class="blank_line pos_sticky_line">
+      <hr>
+    </div>
+    <div class="pos_sticky">
+      <!-- <h1>Interactive Resume</h1> -->
+    </div>
+    <div class="arrow_down" data-aos="fade-up" data-aos-duration="800">
+      <i class="fa-2x fa-solid fa-chevron-down" (click)="scroll('profile')"></i>
+    </div>
+  </div>
+
+  
+  <div id="profile">
+    <img class="slide_bg" src="assets/profileBg.png" alt="">
+   
+    
+    <div class="slide_content">
+      <h1 data-aos="fade-up" class="heading_font_style pos_sticky">Profile</h1>
+
+      <p data-aos="fade-up" class="text_color">I am a Front-End Web Developer</p>
+
+      <div data-aos="fade-up" class="blank_line_blue pos_sticky_line">
+        <hr>
+      </div>
+
+      <div class="profile_text">
+        <div data-aos="fade-right" class="subheading_font_style">
+          About
+        </div>
+        <div>
+          I am a Front end Developer
+        </div>
+
+        <div data-aos="flip-left" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+          <!-- <img  class="profile_img" src="assets/MyPhoto.jpeg" alt="image"> -->
+        </div>
+
+        <div data-aos="fade-left" class="subheading_font_style">
+          Details
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div data-aos="fade-up" id="experience">
+    <img class="slide_bg" src="assets/ExperienceBg.jpg" alt="">
+
+    <div  class="slide_content">
+      <h1 class="heading_font_style pos_sticky" data-aos="fade-up">Experience</h1>
+
+      <p class="text_color" data-aos="fade-up">The only source of knowledge is experience
+        - Albert Einstein
+      </p>
+
+      <div data-aos="fade-up" class="blank_line_blue pos_sticky_line">
+        <hr>
+      </div>
+      
+      <div class="subheading_font_style" style="padding-top: 2vh;" data-aos="fade-up">
+        Carrers
+      </div>
+
+      <div class="detailed_text">
+        <div>
+          <div class="small_text" data-aos="fade-right">Pristyn Care -</div>
+          <div class="small_text" data-aos="fade-right">Pepcoding -</div>
+          <div class="small_text" data-aos="fade-right">Tata Power -</div>
+        </div>
+        <div>
+          <div class="small_text" data-aos="fade-up"><b>Front-End Web Developer</b></div>
+          <div class="small_text" data-aos="fade-up"><b>Java/Web Developer Intern</b></div>
+          <div class="small_text" data-aos="fade-up"><b>Intern</b></div>
+        </div>
+        <div>
+          <div class="small_text" data-aos="fade-left">(Sept 2021 - Currently working)</div>
+          <div class="small_text" data-aos="fade-left">(Feb 2020 - Aug 2020)</div>
+          <div class="small_text" data-aos="fade-left">(June 2019 - Aug 2019)</div>
+        </div>
+      </div>
+      <div class="subheading_font_style" style="padding-top: 2vh;" data-aos="fade-up">
+        Educations
+      </div>
+
+      <div class="detailed_text">
+        <div>
+          <div class="small_text" data-aos="fade-right">Bhagwan Parshuram Institute of Technology -</div>
+          <div class="small_text" data-aos="fade-right">S.D. Public School -</div>
+          <div class="small_text" data-aos="fade-right"> Vaish Sr. Sec School -</div>
+        </div>
+        <div>
+          <div class="small_text" data-aos="fade-up"><b>B. Tech</b>Marks - 72%</div>
+          <div class="small_text" data-aos="fade-up"><b>12th PCM</b>Marks - 73%</div>
+          <div class="small_text" data-aos="fade-up"><b>10th</b>Marks - 86%</div>
+        </div>
+        <div>
+          <div class="small_text" data-aos="fade-left">(2017 - 2021)</div>
+          <div class="small_text" data-aos="fade-left">(2015 - 2016)</div>
+          <div class="small_text" data-aos="fade-left">(2014 - 2015)</div>
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+
+  <div data-aos="fade-up" id="skills">
+    <img class="slide_bg" src="assets/skillsBg.jpg" alt="">
+    <div class="slide_content">
+      <h1 class="heading_font_style pos_sticky" data-aos="fade-up">Skills</h1>
+
+      <p class="text_color" data-aos="fade-up">I am Building my skills, not my resume
+      </p>
+
+      <div data-aos="fade-up" class="blank_line_blue pos_sticky_line">
+        <hr>
+      </div>
+      
+    </div>
+  </div>
+  
+  <!-- <div id="contact">
+    Contact
+  </div> -->
+  <!-- <ul class="social-links">
+    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+    <li><a href="#"><i class="fa fa-skype"></i></a></li>
+ </ul> -->
+  <div class="navBar" data-aos="fade-up" data-aos-duration="800" @myInsertRemoveTrigger *ngIf="showNavbar">
+    <div class="fa-solid fa-arrow-up navBar_btn" (click)="scroll('home'); "></div>
+    <div class="navBar_btn" [ngClass]="selectedBtn==='profile' ? 'selected_btn' : ''" (click)="scroll('profile'); ">Profile</div>
+    <div class="navBar_btn" [ngClass]="selectedBtn==='experience' ? 'selected_btn' : ''" (click)="scroll('experience'); ">Experience</div>
+    <div class="navBar_btn" [ngClass]="selectedBtn==='skills' ? 'selected_btn' : ''" (click)="scroll('skills'); ">Skills</div>
+    <div class="navBar_btn" [ngClass]="selectedBtn==='contact' ? 'selected_btn' : ''" (click)="scroll('contact'); ">Contact</div>
+  </div>
+</div>
