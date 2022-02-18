@@ -6,7 +6,7 @@
 .landing_img{
     position: fixed;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     filter: blur(4px);
     
 }
@@ -44,7 +44,7 @@
 }
 .slide_bg{
     position: absolute;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     box-shadow: 2px 2px 15px 1px;    
 }
