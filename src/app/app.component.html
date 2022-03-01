@@ -2,13 +2,13 @@
   <img class="landing_img" src="assets/homeBg.jpg" alt="">
   
   <div class="landing_content" id="home">
-    <div data-aos="zoom-in" data-aos-duration="1000">
+    <div data-aos="zoom-in" data-aos-duration="1500">
       <h1 class="landing_content_text heading_font_style">Jai Kumar</h1>
     </div>
-    <div data-aos="zoom-in" data-aos-duration="1000" class="blank_line pos_sticky_line">
+    <div data-aos="zoom-in" data-aos-duration="1500" class="blank_line pos_sticky_line">
       <hr>
     </div>
-    <div data-aos="zoom-in" data-aos-duration="1000"class="pos_sticky">
+    <div data-aos="zoom-in" data-aos-duration="1500"class="pos_sticky">
       <h1>Interactive Resume</h1>
     </div>
     <div class="arrow_down" data-aos="fade-up" data-aos-duration="1000">
@@ -31,25 +31,25 @@
       </div>
 
       <div class="profile_text">
-        <div data-aos="fade-right" class="subheading_font_style">
+        <!-- <div data-aos="fade-right" class="subheading_font_style">
           About
         </div>
-        <!-- <div>
+        <div>
           I am a Front end Developer
-        </div> -->
+        </div>
 
         <div data-aos="flip-left" data-aos-anchor-placement="top-center" data-aos-duration="1000">
-          <img  class="profile_img" src="assets/MyPhoto.jpeg" alt="image">
+          <img  class="profile_img" src="assets/MyPhoto.jpg" alt="image">
         </div>
 
         <div data-aos="fade-left" class="subheading_font_style">
           Details
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
   
-  <div data-aos="fade-up" id="experience">
+  <div id="experience">
     <img class="slide_bg" src="assets/ExperienceBg.jpg" alt="">
 
     <div  class="slide_content">
@@ -68,7 +68,7 @@
       </div>
 
       <div class="detailed_text">
-        <div>
+        <!-- <div>
           <div class="small_text" data-aos="fade-right">Pristyn Care -</div>
           <div class="small_text" data-aos="fade-right">Pepcoding -</div>
           <div class="small_text" data-aos="fade-right">Tata Power -</div>
@@ -82,14 +82,14 @@
           <div class="small_text" data-aos="fade-left">(Sept 2021 - Currently working)</div>
           <div class="small_text" data-aos="fade-left">(Feb 2020 - Aug 2020)</div>
           <div class="small_text" data-aos="fade-left">(June 2019 - Aug 2019)</div>
-        </div>
+        </div> -->
       </div>
       <div class="subheading_font_style" style="padding-top: 2vh;" data-aos="fade-up">
         Educations
       </div>
 
       <div class="detailed_text">
-        <div>
+        <!-- <div>
           <div class="small_text" data-aos="fade-right">Bhagwan Parshuram Institute of Technology -</div>
           <div class="small_text" data-aos="fade-right">S.D. Public School -</div>
           <div class="small_text" data-aos="fade-right"> Vaish Sr. Sec School -</div>
@@ -103,14 +103,14 @@
           <div class="small_text" data-aos="fade-left">(2017 - 2021)</div>
           <div class="small_text" data-aos="fade-left">(2015 - 2016)</div>
           <div class="small_text" data-aos="fade-left">(2014 - 2015)</div>
-        </div>
+        </div> -->
       </div>
 
     </div>
     
   </div>
 
-  <div data-aos="fade-up" id="skills">
+  <div id="skills">
     <img class="slide_bg" src="assets/skillsBg.jpg" alt="">
     <div class="slide_content">
       <h1 class="heading_font_style pos_sticky" data-aos="fade-up">Skills</h1>
@@ -137,11 +137,16 @@
     <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
     <li><a href="#"><i class="fa fa-skype"></i></a></li>
  </ul> -->
-  <div class="navBar" data-aos="fade-up" data-aos-duration="800" @myInsertRemoveTrigger *ngIf="showNavbar">
-    <div class="fa-solid fa-arrow-up navBar_btn" (click)="scroll('home'); "></div>
-    <div class="navBar_btn" [ngClass]="selectedBtn==='profile' ? 'selected_btn' : ''" (click)="scroll('profile'); ">Profile</div>
-    <div class="navBar_btn" [ngClass]="selectedBtn==='experience' ? 'selected_btn' : ''" (click)="scroll('experience'); ">Experience</div>
-    <div class="navBar_btn" [ngClass]="selectedBtn==='skills' ? 'selected_btn' : ''" (click)="scroll('skills'); ">Skills</div>
-    <div class="navBar_btn" [ngClass]="selectedBtn==='contact' ? 'selected_btn' : ''" (click)="scroll('contact'); ">Contact</div>
+ <div class="navnav" id="navnav">
+   <div class="navBar_pc" id = "navbar_pc" data-aos="fade-up" data-aos-duration="800" @myInsertRemoveTrigger *ngIf="showNavbar">
+     <div class="fa-solid fa-arrow-up navBar_btn" (click)="scroll('home'); "></div>
+     <div class="navBar_btn" [ngClass]="selectedBtn==='profile' ? 'selected_btn' : ''" (click)="scroll('profile'); ">Profile</div>
+     <div class="navBar_btn" [ngClass]="selectedBtn==='experience' ? 'selected_btn' : ''" (click)="scroll('experience'); ">Experience</div>
+     <div class="navBar_btn" [ngClass]="selectedBtn==='skills' ? 'selected_btn' : ''" (click)="scroll('skills'); ">Skills</div>
+     <div class="navBar_btn" [ngClass]="selectedBtn==='contact' ? 'selected_btn' : ''" (click)="scroll('contact'); ">Contact</div>
+   </div>
+ </div>
+  <div id="navbar_phone">
+    
   </div>
 </div>

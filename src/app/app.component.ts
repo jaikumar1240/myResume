@@ -4,7 +4,6 @@ import * as AOS from 'aos';
 
 import {
   trigger,
-  state,
   style,
   animate,
   transition,
@@ -25,16 +24,6 @@ import {
         animate('200ms', style({ opacity: 0 }))
       ])
     ]),
-    trigger('textTrigger', [
-      transition(':enter', [
-        style({
-          transform: 'scale(1.7)',
-          opacity: 0
-        }), 
-        animate('{{timing}} ease', style('*'))
-      ], { params: { timing: '1.4s'}
-          }),
-    ]),
   ]
 })
 export class AppComponent {
@@ -52,6 +41,11 @@ export class AppComponent {
   onWindowScroll() {
     if(window.scrollY>=0.8*window.innerHeight){
       this.showNavbar = true;
+      document.getElementById("navnav")?.classList.remove('less_opacity');
+      
+      setTimeout(() => {
+        document.getElementById("navnav")?.classList.add('less_opacity');
+      }, 3000);
     }
     else{
       this.showNavbar =  false;
