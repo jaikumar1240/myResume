@@ -2,6 +2,8 @@
     // height: 400vh;
     display: flex;
     flex-direction: column;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
 }
 .landing_img{
     position: fixed;
@@ -21,7 +23,8 @@
 }
 .landing_content_text{
     font-size: 6vw;
-    font-weight: 400;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
 }
 .arrow_down{
     :hover{
@@ -32,10 +35,14 @@
     padding-top: 20vh;
 }
 .heading_font_style{
-    font-family: system-ui;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
 }
 .subheading_font_style{
     font-size: xx-large;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    text-align: center;
 }
 .blank_line{
     border-left: 30vw solid white;
@@ -54,7 +61,7 @@
     flex-direction: column;
     align-items: center;
     color: #206c98;
-    padding-top: 4vh;
+    padding-top: 1vh;
     z-index: 1;
     height: 100vh;
     // font-family: system-ui;
@@ -69,26 +76,31 @@
 }
 .pos_sticky_line{
     position: sticky;
-    top: 8vh;
+    top: 4vh;
 }
 .text_color{
     color: #f17338;
     font-size: larger;
+    text-align: center;
 }
-.profile_text{
+.content_center{
+    display: contents;
+}
+.profile_content{
     display: flex;
-    justify-content: space-evenly;
-    padding: 5vh;
+    justify-content: space-around;
+    padding: 2vh;
     width: 100%;
 }
 .profile_img{
-    width: 35vh;
-    margin-top: 5vh;
-    // border: solid 1vh gray;
+    width: 25vw;
     box-shadow: 1px 1px 10px 1px; 
 }
+@media screen and (max-width: 576px) {
+    .profile_img { width: 60vw;}
+    // .detailed_text{ font-size: small; }
+  }
 .exp_img{
-    // filter: blur(4px);
     width: 100%;
     height: 100vh;
     position: relative;
@@ -101,7 +113,7 @@
     z-index: 1;
     position: fixed;
     top: 35vh;
-    margin-left: 1vw;
+    margin-left: 0.5vw;
     opacity: 1;
     :hover{
         opacity: 0.8;
@@ -109,16 +121,12 @@
     box-shadow: 1px 1px 10px 1px; 
 }
 .navBar_btn{
-    padding: 1.5vh;
+    padding: 1.2vh;
     background-color: #f17338;
     color: white;
     cursor: pointer;
     display: flex;
     justify-content: center;
-}
-.less_opacity{
-    opacity: 0.4;
-    transition:opacity 0.7s
 }
 
 @media screen and (max-width: 576px) {
@@ -131,12 +139,7 @@
     background-color: #206c98;
 }
 .detailed_text{
-    display: flex;
     color: black;
     font-size: larger;
-    padding-top: 2vh;
-}
-.small_text{
-    padding: 2.5vh;
-    padding-right: 10vw ;
+    text-align: center;
 }

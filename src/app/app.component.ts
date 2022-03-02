@@ -41,11 +41,6 @@ export class AppComponent {
   onWindowScroll() {
     if(window.scrollY>=0.8*window.innerHeight){
       this.showNavbar = true;
-      document.getElementById("navnav")?.classList.remove('less_opacity');
-      
-      setTimeout(() => {
-        document.getElementById("navnav")?.classList.add('less_opacity');
-      }, 3000);
     }
     else{
       this.showNavbar =  false;
@@ -63,5 +58,6 @@ export class AppComponent {
       this.selectedBtn = 'contact';
     }
   }
+  
 }
   
