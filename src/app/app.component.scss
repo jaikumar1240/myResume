@@ -70,6 +70,11 @@
     border-left: 30vw solid #69c3f3;
     height: 0.2vh;
 }
+@media screen and (max-width: 576px) {
+    .line_margin{
+        margin: 1vh;
+    }
+}
 .pos_sticky{
     position: sticky;
     top: 0;
@@ -98,7 +103,6 @@
 }
 @media screen and (max-width: 576px) {
     .profile_img { width: 60vw;}
-    .detailed_text{ color: red; }
   }
 .exp_img{
     width: 100%;
@@ -140,7 +144,9 @@
 }
 .detailed_text{
     color: black;
-    // font-size: larger;
     text-align: center;
-    padding: 1vh;
+}
+.progress_bar{
+    margin-bottom: 4vh;
+    height: 1.5rem;
 }
