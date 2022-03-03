@@ -98,7 +98,7 @@
 }
 @media screen and (max-width: 576px) {
     .profile_img { width: 60vw;}
-    // .detailed_text{ font-size: small; }
+    .detailed_text{ color: red; }
   }
 .exp_img{
     width: 100%;
@@ -140,6 +140,7 @@
 }
 .detailed_text{
     color: black;
-    font-size: larger;
+    // font-size: larger;
     text-align: center;
+    padding: 1vh;
 }
