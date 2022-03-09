@@ -9,6 +9,7 @@ import {
   transition,
   // ...
 } from '@angular/animations';
+import { FormBuilder } from '@angular/forms';
 interface Detail{
   institute:string,
   position:string,
@@ -32,6 +33,15 @@ interface Detail{
   ]
 })
 export class AppComponent {
+  constructor( private formBuilder: FormBuilder){}
+
+  ContactForm = this.formBuilder.group({
+    name:[''],
+    email:[''],
+    contact:[''],
+    message:['']
+  })
+
   showNavbar: boolean = false;
   ngOnInit() {
     AOS.init();

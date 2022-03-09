@@ -81,7 +81,7 @@
 }
 .pos_sticky_line{
     position: sticky;
-    top: 4vh;
+    top: 5vh;
 }
 .text_color{
     color: #f17338;
@@ -149,4 +149,14 @@
 .progress_bar{
     margin-bottom: 4vh;
     height: 1.5rem;
+}
+.contact-form{
+    padding: 2vh;
+}
+.form-group{
+    padding: 2vh;
+    // width: 50vw;
+}
+.message-form{
+    height: 15vh;
 }
