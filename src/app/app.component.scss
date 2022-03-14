@@ -103,12 +103,12 @@
 }
 .profile-text{
     padding: 1.2vh;
-    // text-align: start;
-    font-size: x-large;
+    font-size: large;
 }
-@media screen and (max-width: 576px) {
-    .profile_img { width: 60vw;}
-  }
+// @media screen and (max-width: 576px) {
+//     .profile_img { width: 60vw;};
+  
+//   }
 .exp_img{
     width: 100%;
     height: 100vh;
@@ -141,10 +141,16 @@
 }
 
 @media screen and (max-width: 576px) {
-    #navbar_pc { display: none; }   /* hide it elsewhere */
+    #navbar_pc { display: none; };   /* hide it elsewhere */
+    .profile_img { width: 60vw;};
   }
 @media screen and (min-width: 576px) {
-    #navbar_phone { display: none; }   /* hide it elsewhere */
+    #navbar_phone { display: none; }; /* hide it elsewhere */
+    .profile-text{
+        padding: 1.5vh;
+        font-size: xx-large;
+        text-align: start;
+    }
 }  
 .selected_btn{
     background-color: #206c98;
