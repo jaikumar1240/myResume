@@ -101,6 +101,11 @@
     width: 25vw;
     box-shadow: 1px 1px 10px 1px; 
 }
+.profile-text{
+    padding: 1.2vh;
+    // text-align: start;
+    font-size: x-large;
+}
 @media screen and (max-width: 576px) {
     .profile_img { width: 60vw;}
   }
@@ -120,7 +125,9 @@
     margin-left: 0.5vw;
     opacity: 1;
     :hover{
-        opacity: 0.8;
+        // opacity: 0.8;
+        transition: 0.2s ease-out;
+        transform: scale(1.13);
     }
     box-shadow: 1px 1px 10px 1px; 
 }
@@ -149,6 +156,9 @@
 .progress_bar{
     margin-bottom: 4vh;
     height: 1.5rem;
+}
+.progress-bar{
+    background-color: #104578;
 }
 .contact-form{
     padding: 2vh;
