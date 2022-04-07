@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { HostListener } from "@angular/core";
 import * as AOS from 'aos';
-
+import { FormBuilder, FormControl, FormGroup, FormsModule, NgForm, Validators } from '@angular/forms';
 import {
   trigger,
   style,
@@ -9,7 +9,6 @@ import {
   transition,
   // ...
 } from '@angular/animations';
-import { FormBuilder } from '@angular/forms';
 interface Detail{
   institute:string,
   position:string,
@@ -32,19 +31,28 @@ interface Detail{
     ]),
   ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  // @ViewChild('f') contForm: NgForm | undefined;
+  // contactRecForm!: FormGroup
   constructor( private formBuilder: FormBuilder){}
-
   ContactForm = this.formBuilder.group({
     name:[''],
     email:[''],
     contact:[''],
     message:['']
   })
+  runningTimeOut: any;
 
   showNavbar: boolean = false;
   ngOnInit() {
     AOS.init();
+    // this.contactRecForm = new FormGroup({
+    //   'name' : new FormControl(null, Validators.required),
+    //   'contact' : new FormControl(null),
+    //   'email' : new FormControl(null, [Validators.required, Validators.email]),
+    //   'message' : new FormControl(null, [Validators.required]),
+
+    // })
   } 
   
   title = 'Jai Kumar';
@@ -64,46 +72,52 @@ export class AppComponent {
     position:"Intern",
     time:"(June 2019 - Aug 2019)"
   }]
-  skills = [{
-    skillname: "HTML",
-    skillvalue: "100%",
-  },
-  {
-    skillname: "CSS",
-    skillvalue: "95%",
-  },
-  {
-    skillname: "JAVASCRIPT",
-    skillvalue: "90%",
-  },
-  {
-    skillname: "JAVA",
-    skillvalue: "80%",
-  },
-  {
-    skillname: "ANGULAR",
-    skillvalue: "75%",
-  },
-  {
-    skillname: "BOOTSTRAP",
-    skillvalue: "65%",
-  },
-  {
-    skillname: "REACT",
-    skillvalue: "50%",
-  },
-  {
-    skillname: "VUE",
-    skillvalue: "30%",
-  },
-]
+//   skills = [{
+//     skillname: "HTML",
+//     skillvalue: "100%",
+//   },
+//   {
+//     skillname: "CSS",
+//     skillvalue: "95%",
+//   },
+//   {
+//     skillname: "JAVASCRIPT",
+//     skillvalue: "90%",
+//   },
+//   {
+//     skillname: "JAVA",
+//     skillvalue: "80%",
+//   },
+//   {
+//     skillname: "ANGULAR",
+//     skillvalue: "75%",
+//   },
+//   {
+//     skillname: "BOOTSTRAP",
+//     skillvalue: "65%",
+//   },
+//   {
+//     skillname: "REACT",
+//     skillvalue: "50%",
+//   },
+//   {
+//     skillname: "VUE",
+//     skillvalue: "30%",
+//   },
+// ]
   scroll(id:any){
       document.getElementById(id)?.scrollIntoView({behavior:'smooth'});
   }
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
+    if(this.runningTimeOut){
+      clearTimeout(this.runningTimeOut);
+    }
     if(window.scrollY>=0.8*window.innerHeight){
       this.showNavbar = true;
+      this.runningTimeOut = setTimeout(() => {
+        this.showNavbar = false
+      }, 5000);
     }
     else{
       this.showNavbar =  false;
@@ -121,6 +135,19 @@ export class AppComponent {
       this.selectedBtn = 'contact';
     }
   }
+  // onSubmit(form:NgForm){
+  //   console.log(form);
+  // }
+  // onSubmit(){
+  //   console.log(this.contForm);
+  //   console.log(this.contForm?.form.value.name);
+  //   console.log(this.contForm?.form.value.email);
+  //   this.contForm?.reset();
+  // }
+  // onSubmitRec(){
+  //   console.log(this.contactRecForm);
+  //   // this.contactRecForm.reset();
+  // }
   
 }
   

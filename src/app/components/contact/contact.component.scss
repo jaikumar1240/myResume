@@ -1,0 +1,30 @@
+.contact-form{
+    padding: 2vh;
+}
+.social-links{
+    // padding: 2rem;
+}
+.social-icon{
+    background-color: #f17338;
+    padding: 2vh;
+    color: white;
+    margin: 3vh;
+    border-radius: 5vh;
+}
+input.ng-invalid.ng-touched{
+    border: solid 1px rgb(247, 67, 67);
+}
+.invaild-warning{
+    color: red;
+}
+.form-group{
+    padding: 2vh;
+    // width: 50vw;
+}
+.message-form{
+    height: 15vh;
+}
+.submit-btn{
+    margin: 2rem;
+    margin-left: 5rem;
+}

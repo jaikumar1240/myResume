@@ -1,5 +1,10 @@
+<app-landing-page></app-landing-page>
+<app-profile></app-profile>
+<app-experience></app-experience>
+<app-skills></app-skills>
+<app-contact></app-contact>
 <div class="main_body">
-  <img class="landing_img" src="assets/homeBg.jpg" alt="">
+  <!-- <img class="landing_img" src="assets/homeBg.jpg" alt="">
   
   <div class="landing_content" id="home">
     <div data-aos="zoom-in" data-aos-duration="1500">
@@ -14,10 +19,10 @@
     <div class="arrow_down" data-aos="fade-up" data-aos-duration="1000">
       <i class="fa-2x fa-solid fa-chevron-down" (click)="scroll('profile')"></i>
     </div>
-  </div>
+  </div> -->
 
   
-  <div id="profile">
+  <!-- <div id="profile">
     <img class="slide_bg" src="assets/profileBg.png" alt="">
    
     
@@ -65,9 +70,9 @@
     
       </div>
     </div>
-  </div>
+  </div> -->
   
-  <div id="experience">
+  <!-- <div id="experience">
     <img class="slide_bg" src="assets/skillsBg.jpg" alt="">
 
     <div  class="slide_content">
@@ -133,9 +138,9 @@
 
     </div>
     
-  </div>
+  </div> -->
 
-  <div id="skills">
+  <!-- <div id="skills">
     <img class="slide_bg" src="assets/ExperienceBg.jpg" alt="">
     <div class="slide_content">
       <h1 class="heading_font_style pos_sticky" data-aos="fade-up">Skills</h1>
@@ -155,9 +160,9 @@
       </div>
       
     </div>
-  </div>
+  </div> -->
   
-  <div class="contact-page" id="contact">
+  <!-- <div class="contact-page" id="contact">
     <img class="slide_bg" src="assets/skillsBg.jpg" alt="">
    
     
@@ -165,48 +170,141 @@
 
       <h1 class="heading_font_style pos_sticky" data-aos="fade-up">Contact</h1>
 
-      <p class="text_color" data-aos="fade-up"> Good communication begins with connection - OPRAH
+      <p class="text_color" data-aos="fade-up"> Good communication begins with connection
       </p>
 
       <div data-aos="fade-right" class="blank_line_blue pos_sticky_line">
         <hr>
       </div>
    
-      <form class="contact-form" action="https://submit-form.com/zTxMnFvA">
+      <form class="contact-form" (ngSubmit)="onSubmit()" #f = "ngForm">
         <div class="form-group">
-          <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+          <input 
+          type="text" 
+          class="form-control"
+          id="name" 
+          ngModel 
+          name="name" 
+          placeholder="Name"
+          required
+          #name="ngModel"
+          >
+          <p class="invaild-warning" *ngIf="!name.valid && name.touched">Please enter a name!</p>
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" id="contact" name="contact" placeholder="Contact No.">
+          <input 
+          type="text" 
+          class="form-control" 
+          id="contact" 
+          ngModel 
+          name="contact" 
+          placeholder="Contact No."
+          >
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" id="email" name="email" placeholder="E-mail">
+          <input 
+          type="text" 
+          class="form-control" 
+          id="email" 
+          ngModel 
+          name="email" 
+          placeholder="E-mail"
+          required
+          email
+          #email="ngModel"
+          >
+          <p class="invaild-warning" *ngIf="!email.valid && email.touched">Please enter an e-mail!</p>
         </div>
         <div class="form-group">
-          <input type="text" class="form-control message-form" id="message" name="message" placeholder="Message">
+          <input 
+          type="text" 
+          class="form-control message-form" 
+          id="message" 
+          ngModel 
+          name="message" 
+          placeholder="Message"
+          required
+          #message = "ngModel"
+          >
+          <p class="invaild-warning" *ngIf="!message.valid && message.touched">Please enter a Message!</p>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button 
+          type="submit" 
+          class="btn btn-primary submit-btn"
+          >
+          Submit
+        </button>
       </form>
-      
-
-      <ul class="social-links">
-        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-        <li><a href="#"><i class="fa fa-skype"></i></a></li>
-     </ul>
+      <hr>
+      <form [formGroup]="contactRecForm" class="contact-form" (ngSubmit)="onSubmitRec()">
+        <div class="form-group">
+          <input 
+          type="text" 
+          class="form-control"
+          id="name" 
+          name="name" 
+          placeholder="Name"
+          formControlName = "name"
+          >
+          <p class="invaild-warning" *ngIf="!contactRecForm.get('name')?.valid && contactRecForm.get('name')?.touched">Please enter a name!</p>
+        </div>
+        <div class="form-group">
+          <input 
+          type="text" 
+          class="form-control" 
+          id="contact" 
+          name="contact" 
+          placeholder="Contact No."
+          formControlName = "contact"
+          >
+        </div>
+        <div class="form-group">
+          <input 
+          type="text" 
+          class="form-control" 
+          id="email" 
+          name="email" 
+          placeholder="E-mail"
+          formControlName = "email"
+          >
+          <p class="invaild-warning" *ngIf="!contactRecForm.get('email')?.valid && contactRecForm.get('email')?.touched">Please enter an e-mail!</p>
+        </div>
+        <div class="form-group">
+          <input 
+          type="text" 
+          class="form-control message-form" 
+          id="message" 
+          name="message" 
+          placeholder="Message"
+          formControlName = "message"
+          >
+          <p class="invaild-warning" *ngIf="!contactRecForm.get('message')?.valid && contactRecForm.get('message')?.touched">Please enter a Message!</p>
+        </div>
+        <button 
+          type="submit" 
+          class="btn btn-primary submit-btn"
+          >
+          Submit
+        </button>
+      </form>
+  
+      <div class="social-links">
+        <span><a href="https://www.facebook.com/jaikumar1240"><i class="social-icon fa-brands fa-facebook-f"></i></a>
+        <span>Facebook</span>
+        </span>
+        <span><a href="#"><i class="social-icon fa fa-linkedin"></i></a></span>
+        <span><a href="#"><i class="social-icon fa fa-google"></i></a></span>
+        <span><a href="#"><i class="social-icon fa fa-instagram"></i></a></span>
+     </div>
     </div>
-  </div>
-  <div class="navBar_pc" id = "navbar_pc" data-aos="fade-up" data-aos-duration="800" @myInsertRemoveTrigger *ngIf="showNavbar">
+  </div> -->
+  <!-- <div class="navBar_pc" id = "navbar_pc" data-aos="fade-in" data-aos-duration="800" @myInsertRemoveTrigger *ngIf="showNavbar" >
     <div class="fa-solid fa-arrow-up navBar_btn" (click)="scroll('home'); "></div>
     <div class="navBar_btn" [ngClass]="selectedBtn==='profile' ? 'selected_btn' : ''" (click)="scroll('profile'); ">Profile</div>
     <div class="navBar_btn" [ngClass]="selectedBtn==='experience' ? 'selected_btn' : ''" (click)="scroll('experience'); ">Experience</div>
     <div class="navBar_btn" [ngClass]="selectedBtn==='skills' ? 'selected_btn' : ''" (click)="scroll('skills'); ">Skills</div>
     <div class="navBar_btn" [ngClass]="selectedBtn==='contact' ? 'selected_btn' : ''" (click)="scroll('contact'); ">Contact</div>
-  </div>
+  </div> -->
   <!-- <div id="navbar_phone">
     Phone Nav  
   </div> -->

@@ -1,0 +1,82 @@
+<div class="contact-page" id="contact">
+    <img class="slide_bg" src="assets/skillsBg.jpg" alt="">
+   
+    
+    <div class="slide_content">
+
+      <h1 class="heading_font_style pos_sticky" data-aos="fade-up">Contact</h1>
+
+      <p class="text_color" data-aos="fade-up"> Good communication begins with connection
+      </p>
+
+      <div data-aos="fade-right" class="blank_line_blue pos_sticky_line">
+        <hr>
+      </div>
+   
+      <form class="contact-form" (ngSubmit)="onSubmit()" #f = "ngForm">
+        <div class="form-group">
+          <input 
+          type="text" 
+          class="form-control"
+          id="name" 
+          ngModel 
+          name="name" 
+          placeholder="Name"
+          required
+          #name="ngModel"
+          >
+          <p class="invaild-warning" *ngIf="!name.valid && name.touched">Please enter a name!</p>
+        </div>
+        <div class="form-group">
+          <input 
+          type="text" 
+          class="form-control" 
+          id="contact" 
+          ngModel 
+          name="contact" 
+          placeholder="Contact No."
+          >
+        </div>
+        <div class="form-group">
+          <input 
+          type="text" 
+          class="form-control" 
+          id="email" 
+          ngModel 
+          name="email" 
+          placeholder="E-mail"
+          required
+          email
+          #email="ngModel"
+          >
+          <p class="invaild-warning" *ngIf="!email.valid && email.touched">Please enter an e-mail!</p>
+        </div>
+        <div class="form-group">
+          <input 
+          type="text" 
+          class="form-control message-form" 
+          id="message" 
+          ngModel 
+          name="message" 
+          placeholder="Message"
+          required
+          #message = "ngModel"
+          >
+          <p class="invaild-warning" *ngIf="!message.valid && message.touched">Please enter a Message!</p>
+        </div>
+        <button 
+          type="submit" 
+          class="btn btn-primary submit-btn"
+          >
+          Submit
+        </button>
+      </form>
+  
+      <div class="social-links">
+        <span><a href="https://www.facebook.com/jaikumar1240"><i class="social-icon fa-brands fa-facebook-f"></i></a></span>
+        <span><a href="#"><i class="social-icon fa fa-linkedin"></i></a></span>
+        <span><a href="#"><i class="social-icon fa fa-google"></i></a></span>
+        <span><a href="#"><i class="social-icon fa fa-instagram"></i></a></span>
+     </div>
+    </div>
+  </div>

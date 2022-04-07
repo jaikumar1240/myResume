@@ -1,0 +1,21 @@
+<div id="skills">
+    <img class="slide_bg" src="assets/ExperienceBg.jpg" alt="">
+    <div class="slide_content">
+      <h1 class="heading_font_style pos_sticky" data-aos="fade-up">Skills</h1>
+
+      <p class="text_color" data-aos="fade-up">I am Building my skills, not my resume
+      </p>
+
+      <div data-aos="fade-right" class="blank_line_blue pos_sticky_line">
+        <hr>
+      </div>
+      
+      <div class="container" *ngFor="let skill of skills">
+        <label class="detailed_text" for="progressbar" data-aos="fade-up" data-aos-anchor-placement="center-bottom">{{skill.skillname}}</label>
+        <div class="progress progress_bar" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
+          <div class="progress-bar"  role="progressbar" [ngStyle]="{'width': skill.skillvalue}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{skill.skillvalue}}</div>
+        </div>
+      </div>
+      
+    </div>
+</div>

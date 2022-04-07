@@ -1,0 +1,24 @@
+.navBar_pc{
+    z-index: 1;
+    position: fixed;
+    top: 35vh;
+    margin-left: 0.5vw;
+    opacity: 1;
+    :hover{
+        // opacity: 0.8;
+        transition: 0.2s ease-out;
+        transform: scale(1.13);
+    }
+    box-shadow: 1px 1px 10px 1px; 
+}
+@media screen and (max-width: 576px) {
+    #navbar_pc { display: none; };   /* hide it elsewhere */
+  }
+  .navBar_btn{
+    padding: 1.2vh;
+    background-color: #f17338;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
