@@ -12,7 +12,9 @@ export class LandingPageComponent implements OnInit {
   ngOnInit(): void {
   }
   scroll(id:any){
+    console.log('clickeddd');
     document.getElementById(id)?.scrollIntoView({behavior:'smooth'});
+    
 }
 
 }
