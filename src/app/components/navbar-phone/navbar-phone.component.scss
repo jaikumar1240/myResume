@@ -1,0 +1,53 @@
+.nav-ph {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+.nav-btn{
+    background-color: antiquewhite;
+    padding: 10px 17px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    transition: all 1s;
+
+}
+.dark-nav{
+    background-color: rgb(156, 102, 69);
+    color: white;
+    transition: all 1s;
+}
+.dark-nav-btns{
+    color: white;
+    background-color: rgb(95, 69, 53)!important;
+    transition: all 1s;
+}
+.nav-btns{
+    position: fixed;
+    top: 3rem;
+    text-align: center;
+    background-color: tan;
+    margin: 0 auto;
+    width: 100%;
+    transition: all 1s;
+}
+.navBar_btn{
+    padding: 1rem;
+    cursor: pointer;
+}
+.selected_btn{
+    background-color: #3ba8ec;
+}
+.social-icon{
+    background-color: #3ba8ec;
+    padding: 2vh;
+    color: white;
+    margin: 3vh;
+    box-shadow: 0px 0px 5px 2px;
+}
+@media screen and (min-width: 1000px) {
+    #navbar_phn { display: none; };   /* hide it elsewhere */
+  }

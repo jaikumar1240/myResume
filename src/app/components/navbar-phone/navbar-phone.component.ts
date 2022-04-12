@@ -1,33 +1,28 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { DarkModeService } from '../dark-mode.service';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  selector: 'app-navbar-phone',
+  templateUrl: './navbar-phone.component.html',
+  styleUrls: ['./navbar-phone.component.scss']
 })
-export class NavbarComponent implements OnInit {
+@Input()
+export class NavbarPhoneComponent implements OnInit {
+  constructor(private darkModeService: DarkModeService) { }
 
-  constructor() { }
-  
   ngOnInit(): void {
   }
   scroll(id:any){
     document.getElementById(id)?.scrollIntoView({behavior:'smooth'});
+    this.toggle = false;
   }
+  toggle: boolean = false;
   showNavbar: boolean = false;
-  darkMode: boolean = false;
-  runningTimeOut: any;
   selectedBtn = 'profile'
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-    if(this.runningTimeOut){
-      clearTimeout(this.runningTimeOut);
-    }
     if(window.scrollY>=0.8*window.innerHeight){
       this.showNavbar = true;
-      this.runningTimeOut = setTimeout(() => {
-        this.showNavbar = false
-      }, 5000);
     }
     else{
       this.showNavbar =  false;
@@ -45,4 +40,15 @@ export class NavbarComponent implements OnInit {
       this.selectedBtn = 'contact';
     }
   }
+  @HostListener('click', ['$event.target'])
+  onClick(){
+    console.log('clicked');
+  }
+  darkmodeHandler(){
+    this.darkModeService.darkMode=!this.darkModeService.darkMode
+  }
+  get darkMode(){
+    return this.darkModeService.darkMode
+  }
+  
 }

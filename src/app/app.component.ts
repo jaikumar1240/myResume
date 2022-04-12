@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, Output, ViewChild } from '@angular/core';
 import { HostListener } from "@angular/core";
 import * as AOS from 'aos';
 import { FormBuilder, FormControl, FormGroup, FormsModule, NgForm, Validators } from '@angular/forms';
@@ -44,6 +44,7 @@ export class AppComponent implements OnInit {
   runningTimeOut: any;
 
   showNavbar: boolean = false;
+  darkMode: boolean = false;
   ngOnInit() {
     AOS.init();
     // this.contactRecForm = new FormGroup({
@@ -135,6 +136,7 @@ export class AppComponent implements OnInit {
       this.selectedBtn = 'contact';
     }
   }
+  
   // onSubmit(form:NgForm){
   //   console.log(form);
   // }

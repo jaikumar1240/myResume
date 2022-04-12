@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DarkModeService } from '../dark-mode.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private darkModeService: DarkModeService) { }
   ngOnInit(): void {
+  }
+  get darkMode(){
+    return this.darkModeService.darkMode;
   }
 
 }

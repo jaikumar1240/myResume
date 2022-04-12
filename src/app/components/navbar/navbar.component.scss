@@ -11,17 +11,17 @@
     }
     box-shadow: 1px 1px 10px 1px; 
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1000px) {
     #navbar_pc { display: none; };   /* hide it elsewhere */
   }
   .navBar_btn{
     padding: 1.2vh;
-    background-color: #f17338;
+    background-color: tan;
     color: white;
     cursor: pointer;
     display: flex;
     justify-content: center;
 }
 .selected_btn{
-    background-color: #206c98;
+    background-color: #64b9ee;
 }

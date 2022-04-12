@@ -1,5 +1,9 @@
 <div class="navBar_pc" id = "navbar_pc" data-aos="fade-in" data-aos-duration="800" @myInsertRemoveTrigger *ngIf="showNavbar" >
     <div class="fa-solid fa-arrow-up navBar_btn" (click)="scroll('home'); "></div>
+    <div class="navBar_btn">
+      <i *ngIf="darkMode" class="fa-2x fa-solid fa-moon" (click)="darkMode=!darkMode"></i>
+      <i *ngIf="!darkMode" class="fa-2x fa-solid fa-sun" (click)="darkMode=!darkMode"></i>
+    </div>
     <div class="navBar_btn" [ngClass]="selectedBtn==='profile' ? 'selected_btn' : ''" (click)="scroll('profile'); ">Profile</div>
     <div class="navBar_btn" [ngClass]="selectedBtn==='experience' ? 'selected_btn' : ''" (click)="scroll('experience'); ">Experience</div>
     <div class="navBar_btn" [ngClass]="selectedBtn==='skills' ? 'selected_btn' : ''" (click)="scroll('skills'); ">Skills</div>

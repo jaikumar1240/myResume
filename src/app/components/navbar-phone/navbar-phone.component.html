@@ -1,0 +1,24 @@
+<div class="nav-ph" id="navbar_phn">
+    <div class="nav-btn" [ngClass]="{'dark-nav' : darkMode}">
+        <i class="fa-2x fa fa-bars" aria-hidden="true" (click)="toggle=!toggle"></i>
+        <div>
+            <i *ngIf="darkMode" class="fa-2x fa-solid fa-moon" (click)="darkmodeHandler()"></i>
+            <i *ngIf="!darkMode" class="fa-2x fa-solid fa-sun" (click)="darkmodeHandler()"></i>
+        </div>
+    </div>
+    <section class="nav-btns" [ngClass]="{'dark-nav-btns' : darkMode}" *ngIf="toggle" data-aos="fade-down">
+        <div class="navBar_btn" [ngClass]="selectedBtn==='profile' ? 'selected_btn' : ''" (click)="scroll('profile'); ">Profile</div>
+        <div class="navBar_btn" [ngClass]="selectedBtn==='experience' ? 'selected_btn' : ''" (click)="scroll('experience'); ">Experience</div>
+        <div class="navBar_btn" [ngClass]="selectedBtn==='skills' ? 'selected_btn' : ''" (click)="scroll('skills'); ">Skills</div>
+        <div class="navBar_btn" [ngClass]="selectedBtn==='contact' ? 'selected_btn' : ''" (click)="scroll('contact'); ">Contact</div>
+        <div class="social-links">
+            <span><a href="https://www.facebook.com/jaikumar1240"><i class="social-icon fa-brands fa-facebook-f"></i></a></span>
+            <span><a href="#"><i class="social-icon fa fa-linkedin" ></i></a></span>
+            <span><a href="#"><i class="social-icon fa fa-google"></i></a></span>
+            <span><a href="#"><i class="social-icon fa fa-instagram"></i></a></span>
+         </div>
+    </section>
+
+    
+</div>
+
