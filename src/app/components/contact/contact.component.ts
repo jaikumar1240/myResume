@@ -1,5 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, FormsModule, NgForm, Validators } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -8,28 +9,19 @@ import { FormBuilder, FormControl, FormGroup, FormsModule, NgForm, Validators } 
 })
 export class ContactComponent implements OnInit {
   @ViewChild('f') contForm: NgForm | undefined;
-  contactRecForm!: FormGroup
 
-  constructor() { }
-
+  constructor(private http: HttpClient) { }
   ngOnInit(): void {
-    this.contactRecForm = new FormGroup({
-      'name' : new FormControl(null, Validators.required),
-      'contact' : new FormControl(null),
-      'email' : new FormControl(null, [Validators.required, Validators.email]),
-      'message' : new FormControl(null, [Validators.required]),
-
-    })
   }
   onSubmit(){
-    console.log(this.contForm);
-    console.log(this.contForm?.form.value.name);
-    console.log(this.contForm?.form.value.email);
+    // console.log(this.contForm?.value);
+    this.http.post('https://first-b528e-default-rtdb.firebaseio.com/contact.json',this.contForm?.value).
+    subscribe(res =>{
+      // console.log(res);
+      
+    })
     this.contForm?.reset();
-  }
-  onSubmitRec(){
-    console.log(this.contactRecForm);
-    // this.contactRecForm.reset();
+    alert("Details Submitted Successfully!");
   }
 
 }

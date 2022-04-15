@@ -1,4 +1,4 @@
-<div class="nav-ph" id="navbar_phn">
+<div class="nav-ph" id="navbar_phn" *ngIf="showNavbar" @myInsertRemoveTrigger>
     <div class="nav-btn" [ngClass]="{'dark-nav' : darkMode}">
         <i class="fa-2x fa fa-bars" aria-hidden="true" (click)="toggle=!toggle"></i>
         <div>

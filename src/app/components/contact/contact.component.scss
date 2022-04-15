@@ -1,15 +1,12 @@
 .contact-form{
     padding: 2vh;
 }
-.social-links{
-    // padding: 2rem;
-}
 .social-icon{
     background-color: #f17338;
     padding: 2vh;
     color: white;
     margin: 3vh;
-    border-radius: 5vh;
+    box-shadow: 2px 2px 10px 0px black;
 }
 input.ng-invalid.ng-touched{
     border: solid 1px rgb(247, 67, 67);

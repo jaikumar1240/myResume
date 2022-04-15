@@ -1,10 +1,29 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { DarkModeService } from '../dark-mode.service';
+import {
+  trigger,
+  style,
+  animate,
+  transition,
+  // ...
+} from '@angular/animations';
 
 @Component({
   selector: 'app-navbar-phone',
   templateUrl: './navbar-phone.component.html',
-  styleUrls: ['./navbar-phone.component.scss']
+  styleUrls: ['./navbar-phone.component.scss'],
+  animations: [
+    // animation triggers go here
+    trigger('myInsertRemoveTrigger', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('200ms', style({ opacity: 1 })),
+      ]),
+      transition(':leave', [
+        animate('200ms', style({ opacity: 0 }))
+      ])
+    ]),
+  ]
 })
 @Input()
 export class NavbarPhoneComponent implements OnInit {
@@ -21,7 +40,7 @@ export class NavbarPhoneComponent implements OnInit {
   selectedBtn = 'profile'
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-    if(window.scrollY>=0.8*window.innerHeight){
+    if(window.scrollY >= window.innerHeight){
       this.showNavbar = true;
     }
     else{

@@ -1,9 +1,28 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import {
+  trigger,
+  style,
+  animate,
+  transition,
+  // ...
+} from '@angular/animations';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
+  animations: [
+    // animation triggers go here
+    trigger('myInsertRemoveTrigger', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('200ms', style({ opacity: 1 })),
+      ]),
+      transition(':leave', [
+        animate('200ms', style({ opacity: 0 }))
+      ]),
+    ]),
+  ]
 })
 export class NavbarComponent implements OnInit {
 
@@ -18,6 +37,7 @@ export class NavbarComponent implements OnInit {
   darkMode: boolean = false;
   runningTimeOut: any;
   selectedBtn = 'profile'
+  
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
     if(this.runningTimeOut){
