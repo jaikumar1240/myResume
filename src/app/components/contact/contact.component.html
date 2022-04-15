@@ -67,9 +67,11 @@
         <button 
           type="submit" 
           class="btn btn-primary submit-btn"
+          [disabled]="!this.contForm?.valid"
           >
           Submit
         </button>
+        <p class="invaild-warning" *ngIf="!this.contForm?.valid">Please enter all the details to Submit!</p>
       </form>
   
       <div class="social-links">
