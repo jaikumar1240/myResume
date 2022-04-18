@@ -2,9 +2,10 @@
     position: fixed;
     top: 0;
     z-index: 10;
+    color: white;
 }
 .nav-btn{
-    background-color: antiquewhite;
+    background-color: #206c98;
     padding: 10px 17px;
     position: fixed;
     width: 100%;
@@ -17,11 +18,11 @@
 }
 .dark-nav{
     background-color: rgb(156, 102, 69);
-    color: white;
+    color: black;
     transition: all 1s;
 }
 .dark-nav-btns{
-    color: white;
+    color: black;
     background-color: rgb(95, 69, 53)!important;
     transition: all 1s;
 }
@@ -29,7 +30,7 @@
     position: fixed;
     top: 3rem;
     text-align: center;
-    background-color: tan;
+    background-color: #3ba8ec;
     margin: 0 auto;
     width: 100%;
     transition: all 1s;
@@ -39,10 +40,10 @@
     cursor: pointer;
 }
 .selected_btn{
-    background-color: #3ba8ec;
+    background-color: tan;
 }
 .social-icon{
-    background-color: #3ba8ec;
+    background-color: #f17338;
     padding: 2vh;
     color: white;
     margin: 3vh;

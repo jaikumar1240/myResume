@@ -7,8 +7,7 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .heading_font_style{
-        font-family: 'Nunito Sans', sans-serif;
-        font-weight: 600;
+    font-family: 'Playfair Display', serif;
 }
 
 .pos_sticky{
@@ -19,6 +18,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     color: #f17338;
     font-size: larger;
     text-align: center;
+    font-weight: 300;
 }
 .blank_line_blue{
     border-left: 30vw solid #69c3f3;
@@ -30,7 +30,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .subheading_font_style{
     font-size: xx-large;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 400;
     text-align: center;
 }

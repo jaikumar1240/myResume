@@ -2,8 +2,8 @@
     <div class="nav-btn" [ngClass]="{'dark-nav' : darkMode}">
         <i class="fa-2x fa fa-bars" aria-hidden="true" (click)="toggle=!toggle"></i>
         <div>
-            <i *ngIf="darkMode" class="fa-2x fa-solid fa-moon" (click)="darkmodeHandler()"></i>
-            <i *ngIf="!darkMode" class="fa-2x fa-solid fa-sun" (click)="darkmodeHandler()"></i>
+            <i *ngIf="!darkMode" class="fa-2x fa-solid fa-moon" (click)="darkmodeHandler()"></i>
+            <i *ngIf="darkMode" class="fa-2x fa-solid fa-sun" (click)="darkmodeHandler()"></i>
         </div>
     </div>
     <section class="nav-btns" [ngClass]="{'dark-nav-btns' : darkMode}" *ngIf="toggle" data-aos="fade-down">

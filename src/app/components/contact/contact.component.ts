@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-contact',
@@ -23,5 +24,4 @@ export class ContactComponent implements OnInit {
     this.contForm?.reset();
     alert("Details Submitted Successfully!");
   }
-
 }
