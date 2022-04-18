@@ -16,7 +16,7 @@ export class ContactComponent implements OnInit {
   constructor(private http: HttpClient,
               private postService: PostService) { }
   ngOnInit(): void {
-    this.fetchPosts();
+    // this.fetchPosts();
   }
   onSubmit(){
     console.log(this.contForm);
@@ -26,23 +26,23 @@ export class ContactComponent implements OnInit {
    this.postService.postContactDetails(payload);
   }
   personArr = {};
-  private fetchPosts(){
-    this.http
-    .get<{[key:string]:Posts}>('https://first-b528e-default-rtdb.firebaseio.com/contact.json')
-    .pipe(
-      map(responseData=>{
-        let contactArr: Posts[] = [];
-        for(let key in responseData){
-          if(responseData.hasOwnProperty(key)){
-            contactArr.push({...responseData[key],id : key})
-          }
-        }
-        return contactArr;
-      }))
-    .subscribe(response =>{
-      console.log(response);
-    })
-  }
+  // private fetchPosts(){
+  //   this.http
+  //   .get<{[key:string]:Posts}>('https://first-b528e-default-rtdb.firebaseio.com/contact.json')
+  //   .pipe(
+  //     map(responseData=>{
+  //       let contactArr: Posts[] = [];
+  //       for(let key in responseData){
+  //         if(responseData.hasOwnProperty(key)){
+  //           contactArr.push({...responseData[key],id : key})
+  //         }
+  //       }
+  //       return contactArr;
+  //     }))
+  //   .subscribe(response =>{
+  //     console.log(response);
+  //   })
+  // }
 
 
 }
