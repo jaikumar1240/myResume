@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import * as AOS from 'aos';
 import { FormBuilder } from '@angular/forms';
 
@@ -14,7 +14,7 @@ interface Detail{
   styleUrls: ['./app.component.scss'],
 
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit ,AfterViewInit{
   constructor( private formBuilder: FormBuilder){}
 
   ngOnInit() {
@@ -36,5 +36,7 @@ export class AppComponent implements OnInit {
     position:"Intern",
     time:"(June 2019 - Aug 2019)"
   }]
+  ngAfterViewInit(): void {
+  }
 }
   

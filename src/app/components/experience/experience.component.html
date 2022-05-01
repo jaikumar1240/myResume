@@ -1,6 +1,7 @@
 <div id="experience">
-    <img class="slide_bg" src="assets/skillsBg.jpg" alt="">
-
+    <!-- <img class="slide_bg" src="assets/skillsBg.jpg" alt=""> -->
+    <div class="slide_bg" [ngClass]="{'dark-bg' : darkMode}"></div>
+    
     <div  class="slide_content">
       <h1 class="heading_font_style pos_sticky" data-aos="fade-up">Experience</h1>
 
@@ -16,7 +17,7 @@
         Carrers
       </div>
 
-      <div class="detailed_text container">
+      <div class="detailed_text container"  [ngClass]="{'dark-content' : darkMode}" >
         <div class="row">
           <div class="col exp-text" data-aos="fade-up">Pristyn Care </div>
           <div class="col exp-text" data-aos="fade-up"><b>Front-End Web Developer</b></div>
@@ -42,7 +43,7 @@
         Educations
       </div>
 
-      <div class="detailed_text container">
+      <div class="detailed_text container"  [ngClass]="{'dark-content' : darkMode}" >
         <div class="row">
           <div class="col exp-text"  data-aos="fade-up">Bhagwan Parshuram Institute of Technology</div>
           <div class="col exp-text"  data-aos="fade-up"><b>B. Tech</b> Marks - 72%</div>

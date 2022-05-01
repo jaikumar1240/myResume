@@ -1,6 +1,6 @@
 <div id="profile">
-    <img class="slide_bg" src="assets/profileBg.png" alt="">
-   
+    <!-- <img class="slide_bg" src="assets/profileBg.png" alt=""> -->
+   <div class="slide_bg" [ngClass]="{'dark-bg' : darkMode}"></div>
     
     <div class="slide_content">
       <h1 data-aos="fade-up" class="heading_font_style pos_sticky">Profile</h1>
@@ -14,13 +14,13 @@
       <div class="profile_content row">
         
        <div class="content_center col col-xl-4 col-md-4 col-sm-12">
-         <img class="profile_img" data-aos="flip-right" src="assets/MyPhoto.jpg" alt="image">
+         <img class="profile_img" [ngClass]="{'dark-profile' : darkMode}" data-aos="flip-right" src="assets/MyPhoto.jpg" alt="image">
        </div>
        <div class="col-xl-4 col-md-8 col-sm-12">
          <div data-aos="fade-up" class="subheading_font_style">
            Details
          </div>
-         <div class="detailed_text"  >
+         <div class="detailed_text" [ngClass]="{'dark-content' : darkMode}" >
            <div data-aos="fade-up" class="profile-text">
 
              <strong>Name :</strong> Jai Kumar

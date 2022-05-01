@@ -1,6 +1,6 @@
 <div class="contact-page" id="contact">
-    <img class="slide_bg" src="assets/skillsBg.jpg" alt="">
-   
+    <!-- <img class="slide_bg" src="assets/skillsBg.jpg" alt=""> -->
+   <div class="slide_bg" [ngClass]="{'dark-bg' : darkMode}"></div>
     
     <div class="slide_content">
 
@@ -14,10 +14,11 @@
       </div>
    
       <form class="contact-form" (ngSubmit)="onSubmit()" #f = "ngForm">
-        <div class="form-group">
+        <div class="form-group" data-aos="fade-up">
           <input 
           type="text" 
           class="form-control"
+          [ngClass]="{'dark-background' : darkMode}"
           id="name" 
           ngModel 
           name="name" 
@@ -27,10 +28,11 @@
           >
           <p class="invaild-warning" *ngIf="!name.valid && name.touched">Please enter a name!</p>
         </div>
-        <div class="form-group">
+        <div class="form-group" data-aos="fade-up">
           <input 
-          type="text" 
-          class="form-control" 
+          type="number" 
+          class="form-control"
+          [ngClass]="{'dark-background' : darkMode}" 
           id="contact" 
           ngModel 
           name="contact" 
@@ -41,6 +43,7 @@
           <input 
           type="text" 
           class="form-control" 
+          [ngClass]="{'dark-background' : darkMode}"
           id="email" 
           ngModel 
           name="email" 
@@ -51,10 +54,11 @@
           >
           <p class="invaild-warning" *ngIf="!email.valid && email.touched">Please enter an e-mail!</p>
         </div>
-        <div class="form-group">
+        <div class="form-group" data-aos="fade-up">
           <input 
           type="text" 
           class="form-control message-form" 
+          [ngClass]="{'dark-background' : darkMode}"
           id="message" 
           ngModel 
           name="message" 
@@ -68,17 +72,18 @@
           type="submit" 
           class="btn btn-primary submit-btn"
           [disabled]="!this.contForm?.valid"
+          data-aos="fade-up"
           >
           Submit
         </button>
-        <p class="invaild-warning" *ngIf="!this.contForm?.valid">Please enter all the details to Submit!</p>
+        <p class="invaild-warning" data-aos="fade-down" *ngIf="!this.contForm?.valid && this.contForm?.touched">Please enter all the details to Submit!</p>
       </form>
   
       <div class="social-links">
-        <span><a href="https://www.facebook.com/jaikumar1240"><i class="social-icon fa-brands fa-facebook-f"></i></a></span>
-        <span><a href="https://www.linkedin.com/in/jaikumar1240"><i class="social-icon fa fa-linkedin"></i></a></span>
-        <span><a href="mailto:{{'jaikumar1240@gmail.com'}}"><i class="social-icon fa fa-google"></i></a></span>
-        <span><a href="https://www.instagram.com/_jairajput_/"><i class="social-icon fa fa-instagram"></i></a></span>
+        <span><a href="https://www.facebook.com/jaikumar1240"><i class="social-icon fa-brands fa-facebook-f" [ngClass]="{'social-icon-dark' : darkMode}" data-aos="fade-up" data-aos-duration="700"></i></a></span>
+        <span><a href="https://www.linkedin.com/in/jaikumar1240"><i class="social-icon fa fa-linkedin" [ngClass]="{'social-icon-dark' : darkMode}" data-aos="fade-up" data-aos-duration="1000"></i></a></span>
+        <span><a href="mailto:{{'jaikumar1240@gmail.com'}}"><i class="social-icon fa fa-google" [ngClass]="{'social-icon-dark' : darkMode}" data-aos="fade-up" data-aos-duration="1300"></i></a></span>
+        <span><a href="https://www.instagram.com/_jairajput_/"><i class="social-icon fa fa-instagram" [ngClass]="{'social-icon-dark' : darkMode}" data-aos="fade-up" data-aos-duration="1600"></i></a></span>
      </div>
      <!-- <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="jai-kumar-960a18194" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/jai-kumar-960a18194?trk=profile-badge">Jai Kumar</a></div> -->
      <!-- <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="jai-kumar-960a18194" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/jai-kumar-960a18194?trk=profile-badge">Jai Kumar</a></div> -->

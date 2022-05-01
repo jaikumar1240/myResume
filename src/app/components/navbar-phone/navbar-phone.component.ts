@@ -1,5 +1,5 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
-import { DarkModeService } from '../dark-mode.service';
+import { DarkModeService } from '../../services/dark-mode.service';
 import {
   trigger,
   style,
@@ -58,10 +58,6 @@ export class NavbarPhoneComponent implements OnInit {
     if(window.scrollY>=3.8*window.innerHeight){
       this.selectedBtn = 'contact';
     }
-  }
-  @HostListener('click', ['$event.target'])
-  onClick(){
-    console.log('clicked');
   }
   darkmodeHandler(){
     this.darkModeService.darkMode=!this.darkModeService.darkMode

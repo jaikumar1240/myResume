@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { DarkModeService } from '../dark-mode.service';
+import { DarkModeService } from '../../services/dark-mode.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -8,7 +8,8 @@ import { DarkModeService } from '../dark-mode.service';
 })
 export class LandingPageComponent implements OnInit {
   @Input() abc:any;
-  constructor(private darkmodeservice: DarkModeService) { }
+  constructor(
+    private darkmodeservice: DarkModeService) { }
   
   ngOnInit(): void {
   }

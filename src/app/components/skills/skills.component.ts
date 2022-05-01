@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DarkModeService } from 'src/app/services/dark-mode.service';
 
 @Component({
   selector: 'app-skills',
@@ -7,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private darkModeService: DarkModeService
+  ) { }
+
 
   ngOnInit(): void {
   }
+  
+  get darkMode(){
+    return this.darkModeService.darkMode;
+  }
+  
   skills = [{
     skillname: "HTML",
     skillvalue: "100%",
@@ -41,7 +50,7 @@ export class SkillsComponent implements OnInit {
   },
   {
     skillname: "VUE",
-    skillvalue: "30%",
+    skillvalue: "40%",
   },
 ]
 

@@ -11,10 +11,7 @@ export class PostService {
 
   constructor(private http: HttpClient) { }
   postContactDetails(payload : Posts){
-    this.http
-    .post('https://first-b528e-default-rtdb.firebaseio.com/contact.json',payload)
-    .subscribe();
-    this.contForm?.reset();
-    alert("Details Submitted Successfully!");
+    return this.http
+    .post('https://firstproject-16bef-default-rtdb.firebaseio.com//contact.json',payload)
   }
 }

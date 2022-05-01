@@ -13,6 +13,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavbarPhoneComponent } from './components/navbar-phone/navbar-phone.component';
+import { RoutingComponent } from './components/routing/routing.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { NavbarPhoneComponent } from './components/navbar-phone/navbar-phone.com
     ContactComponent,
     NavbarComponent,
     NavbarPhoneComponent,
+    RoutingComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { NavbarPhoneComponent } from './components/navbar-phone/navbar-phone.com
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

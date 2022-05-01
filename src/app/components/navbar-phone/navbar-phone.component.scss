@@ -5,7 +5,7 @@
     color: white;
 }
 .nav-btn{
-    background-color: #206c98;
+    // background-color: #206c98;
     padding: 10px 17px;
     position: fixed;
     width: 100%;
@@ -17,35 +17,38 @@
 
 }
 .dark-nav{
-    background-color: rgb(156, 102, 69);
-    color: black;
+    // background-color: rgb(156, 102, 69);
+    // color: white;
     transition: all 1s;
 }
 .dark-nav-btns{
-    color: black;
-    background-color: rgb(95, 69, 53)!important;
+    color: white !important;
+    // background-color: rgb(95, 69, 53)!important;
     transition: all 1s;
 }
 .nav-btns{
     position: fixed;
     top: 3rem;
     text-align: center;
-    background-color: #3ba8ec;
+    // background-color: #3ba8ec;
     margin: 0 auto;
     width: 100%;
     transition: all 1s;
+    backdrop-filter: blur(10px) grayscale(50%);
+    color: black;
 }
 .navBar_btn{
     padding: 1rem;
     cursor: pointer;
 }
 .selected_btn{
-    background-color: tan;
+    // background-color: tan;
+    font-weight: 900;
 }
 .social-icon{
-    background-color: #f17338;
+    // background-color: #f17338;
     padding: 2vh;
-    color: white;
+    color: #a9a9a9;
     margin: 3vh;
     box-shadow: 0px 0px 5px 2px;
 }

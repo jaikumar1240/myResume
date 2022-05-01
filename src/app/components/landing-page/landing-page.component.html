@@ -3,11 +3,11 @@
       <div class="container">
         <h1 data-aos="zoom-in" data-aos-duration="1500">Jai Kumar</h1>
         <hr data-aos="fade-up" class="blank_line">
-        <h2 class=""data-aos="zoom-in" data-aos-duration="2000">Interactive Resume</h2>
+        <h2 class="pos_sticky" data-aos="zoom-in" data-aos-duration="2000">Interactive Resume</h2>
         <i class="fa-2x fa-solid fa-chevron-down arrow_down" data-aos="fade-up" data-aos-duration="2500" (click)="scroll('profile')"></i>
       </div>
     </div>
-  <div class="area" >
+  <div class="area"  [ngClass]="{'area-dark' : darkMode}">
           <ul class="circles">
                   <li></li>
                   <li></li>

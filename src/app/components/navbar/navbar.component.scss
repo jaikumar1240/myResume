@@ -10,18 +10,23 @@
         transform: scale(1.13);
     }
     box-shadow: 1px 1px 10px 1px; 
+    backdrop-filter: blur(5px);
+    transition: all 1s;
 }
 @media screen and (max-width: 1000px) {
     #navbar_pc { display: none; };   /* hide it elsewhere */
   }
   .navBar_btn{
     padding: 1.2vh;
-    background-color: tan;
-    color: white;
     cursor: pointer;
     display: flex;
     justify-content: center;
 }
 .selected_btn{
     background-color: #64b9ee;
+    font-weight: 800;
+}
+.dark-nav{
+    color: #ddd;
+    transition: all 1s;
 }

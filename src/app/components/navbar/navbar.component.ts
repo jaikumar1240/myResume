@@ -6,6 +6,7 @@ import {
   transition,
   // ...
 } from '@angular/animations';
+import { DarkModeService } from 'src/app/services/dark-mode.service';
 
 @Component({
   selector: 'app-navbar',
@@ -26,15 +27,28 @@ import {
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private darkModeService: DarkModeService
+  ) { }
   
   ngOnInit(): void {
   }
+
+  get darkMode(){
+    return this.darkModeService.darkMode
+  }
+
   scroll(id:any){
     document.getElementById(id)?.scrollIntoView({behavior:'smooth'});
   }
+
+  darkmodeHandler(){
+    this.darkModeService.darkMode = !this.darkModeService.darkMode
+    console.log(this.darkMode,'hiiii');
+    
+  }
+
   showNavbar: boolean = false;
-  darkMode: boolean = false;
   runningTimeOut: any;
   selectedBtn = 'profile'
   

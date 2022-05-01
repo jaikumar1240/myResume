@@ -22,6 +22,8 @@
     box-shadow: 1px 1px 10px 1px; 
     margin: 0 auto;
     width: 60%;
+    position: sticky;
+    top: 8vh;
 }
 .arrow_down{
     :hover{
@@ -51,6 +53,7 @@
     background: linear-gradient(to top, #2f9ec7, #004d9b); 
     width: 100%;
     min-height:100vh;
+    transition: all 1s;
 }
 .circles{
     top: 0;
@@ -162,4 +165,8 @@
         border-radius: 50%;
     }
 
+}
+.area-dark{
+    background: linear-gradient(to top,#5b5b5b,#010911);
+    transition: all 1s;
 }

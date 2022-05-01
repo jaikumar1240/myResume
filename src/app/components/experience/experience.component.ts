@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DarkModeService } from 'src/app/services/dark-mode.service';
 
 @Component({
   selector: 'app-experience',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperienceComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private darkModeService: DarkModeService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  get darkMode(){
+    return this.darkModeService.darkMode;
   }
 
 }
