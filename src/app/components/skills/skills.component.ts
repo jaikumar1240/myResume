@@ -22,35 +22,35 @@ export class SkillsComponent implements OnInit {
   
   skills = [{
     skillname: "HTML",
-    skillvalue: "100%",
+    skillvalue: "85%",
   },
   {
     skillname: "CSS",
-    skillvalue: "95%",
+    skillvalue: "80%",
   },
   {
     skillname: "JAVASCRIPT",
-    skillvalue: "90%",
-  },
-  {
-    skillname: "JAVA",
-    skillvalue: "80%",
+    skillvalue: "70%",
   },
   {
     skillname: "ANGULAR",
     skillvalue: "75%",
   },
   {
-    skillname: "BOOTSTRAP",
-    skillvalue: "65%",
+    skillname: "PROBLEM SOLVING",
+    skillvalue: "90%",
   },
   {
-    skillname: "REACT",
-    skillvalue: "50%",
+    skillname: "VERSION CONTROL / GIT",
+    skillvalue: "80%",
   },
   {
-    skillname: "VUE",
-    skillvalue: "40%",
+    skillname: "RESPONSIVE WEB",
+    skillvalue: "75%",
+  },
+  {
+    skillname: "OTHER FRAMEWORKS AND LIBRARIES",
+    skillvalue: "70%",
   },
 ]
 

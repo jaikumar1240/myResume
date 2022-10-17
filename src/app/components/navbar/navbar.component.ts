@@ -43,9 +43,7 @@ export class NavbarComponent implements OnInit {
   }
 
   darkmodeHandler(){
-    this.darkModeService.darkMode = !this.darkModeService.darkMode
-    console.log(this.darkMode,'hiiii');
-    
+    this.darkModeService.darkmodeHandler();
   }
 
   showNavbar: boolean = false;

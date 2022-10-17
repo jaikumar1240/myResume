@@ -59,11 +59,12 @@ export class NavbarPhoneComponent implements OnInit {
       this.selectedBtn = 'contact';
     }
   }
-  darkmodeHandler(){
-    this.darkModeService.darkMode=!this.darkModeService.darkMode
-  }
-  get darkMode(){
-    return this.darkModeService.darkMode
-  }
   
+  darkmodeHandler(){
+    this.darkModeService.darkmodeHandler();
+  }
+
+  get darkMode(){
+    return localStorage.getItem("isDarkMode");
+  }
 }

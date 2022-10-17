@@ -1,4 +1,4 @@
-<div class="navBar_pc" [ngClass]="{'dark-nav' : darkMode}" id = "navbar_pc" data-aos="fade-in" data-aos-duration="800" @myInsertRemoveTrigger >
+<div class="navBar_pc" [ngClass]="{'dark-nav' : darkMode}" id = "navbar_pc" data-aos="fade-in" data-aos-duration="800" *ngIf="showNavbar" @myInsertRemoveTrigger >
     <div class="fa-solid fa-arrow-up navBar_btn" (click)="scroll('home'); "></div>
     <div class="navBar_btn">
       <i *ngIf="darkMode" class="fa-2x fa-solid fa-moon" (click)="darkmodeHandler()"></i>
@@ -8,4 +8,7 @@
     <div class="navBar_btn" [ngClass]="selectedBtn==='experience' ? 'selected_btn' : ''" (click)="scroll('experience'); ">Experience</div>
     <div class="navBar_btn" [ngClass]="selectedBtn==='skills' ? 'selected_btn' : ''" (click)="scroll('skills'); ">Skills</div>
     <div class="navBar_btn" [ngClass]="selectedBtn==='contact' ? 'selected_btn' : ''" (click)="scroll('contact'); ">Contact</div>
+    <div class="navBar_btn" title="Download Resume">
+      <a href="../../../assets/JaiKumar_Resume.pdf" download [ngClass]="{'dark-nav' : darkMode}"><i class="fa fa-download" aria-hidden="true"></i></a>
+  </div>
   </div>

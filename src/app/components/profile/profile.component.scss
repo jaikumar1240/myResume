@@ -18,11 +18,18 @@
 @media screen and (max-width: 1200px) {
     .profile_img { height: 48vh;};
 }
+@media screen and (min-width: 1200px) {
+.profile-text{
+    padding: 2.5vh;
+    font-size: xx-large;
+    text-align: start;
+}
+}
 @media screen and (min-width: 576px) {
     .profile-text{
-        padding: 1.5vh;
-        font-size: xx-large;
-        text-align: start;
+        // padding: 1.5vh;
+        // font-size: xx-large;
+        // text-align: start;
     };
 } 
 .profile{

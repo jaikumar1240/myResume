@@ -37,6 +37,7 @@ input.ng-invalid.ng-touched{
 .form-control{
     border-radius: 0px;
     box-shadow: 0px 0px 10px 0px grey;
+    transition: all 1s;
 }
 .dark-background{
     background-color: #424242;

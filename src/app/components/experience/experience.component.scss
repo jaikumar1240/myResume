@@ -9,3 +9,15 @@
         padding: 1vh;
     }
 }  
+.anchor-class{
+    text-decoration: none;
+    color: black;
+    transition: all 1s;
+    :hover{
+        // background-color: green;
+        box-shadow: 0px 0px 5px 1px;
+    }
+}
+.detailed_text{
+    padding-top: 1rem;
+}
