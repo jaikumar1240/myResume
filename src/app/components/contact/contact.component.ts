@@ -14,27 +14,28 @@ import { PostService } from 'src/app/services/post.service';
 export class ContactComponent implements OnInit {
   @ViewChild('f') contForm: NgForm | undefined;
 
-  constructor(private http: HttpClient,
-              private postService: PostService,
-              private darkModeService: DarkModeService) { }
+  constructor(
+    private postService: PostService,
+    private darkModeService: DarkModeService
+    ) { }
   ngOnInit(): void {
   }
 
 
-  get darkMode(){
+  get darkMode() {
     return this.darkModeService.darkMode;
   }
-  
-  onSubmit(){
+
+  onSubmit() {
     const payload = {
       ...this.contForm?.value
     }
-   this.postService.postContactDetails(payload)
-   .subscribe(res=>{
-    this.contForm?.reset();
-    alert("Details Submitted Successfully!");
-  },error=>{
-    alert("Error Occurred while Saving Details.\nPlease Try Again Later!");
-  });
+    this.postService.postContactDetails(payload)
+      .subscribe(res => {
+        this.contForm?.reset();
+        alert("Details Submitted Successfully!");
+      }, error => {
+        alert("Error Occurred while Saving Details.\nPlease Try Again Later!");
+      });
   }
 }
